@@ -7,9 +7,9 @@ import TeacherForm from './pages/TeacherForm';
 
 const Routes = () => (
   <BrowserRouter>
-    <Route path="/" exact component={Landing}/>
-    <Route path="/study" component={TeacherList}/>
-    <Route path="/giveClasses" component={TeacherForm}/>
+    <Route path="/" exact component={Landing} />
+    <Route path="/study" component={TeacherList} />
+    <Route path="/giveClasses" component={TeacherForm} />
   </BrowserRouter>
 );
 

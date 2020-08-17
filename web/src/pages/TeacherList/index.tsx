@@ -9,7 +9,7 @@ import api from '../../services/api';
 
 import './styles.css';
 
-const TeacherList = () =>{
+const TeacherList: React.FC = () => {
   const [subject, setSubject] = useState('');
   const [week_day, setWeekDay] = useState('');
   const [time, setTime] = useState('');
@@ -23,8 +23,8 @@ const TeacherList = () =>{
       params: {
         subject,
         week_day,
-        time
-      }
+        time,
+      },
     });
 
     setTeachers(response.data);
@@ -35,11 +35,11 @@ const TeacherList = () =>{
       <PageHeader title="Estes são os proffys disponíveis">
         <form id="search-teachers" onSubmit={searchTeachers}>
           <Select
-            name="subject" 
+            name="subject"
             label="Matéria"
             value={subject}
-            onChange={ e => {
-              setSubject(e.target.value)
+            onChange={e => {
+              setSubject(e.target.value);
             }}
             options={[
               { value: 'Artes', label: 'Artes' },
@@ -55,15 +55,15 @@ const TeacherList = () =>{
               { value: 'Inglês', label: 'Inglês' },
               { value: 'Espanhol', label: 'Espanhol' },
               { value: 'Língua Portuguesa', label: 'Língua Portuguesa' },
-              { value: 'Química', label: 'Química' }
+              { value: 'Química', label: 'Química' },
             ]}
           />
           <Select
-            name="week_day" 
+            name="week_day"
             label="Dia da semana"
             value={week_day}
-            onChange={ e => {
-              setWeekDay(e.target.value)
+            onChange={e => {
+              setWeekDay(e.target.value);
             }}
             options={[
               { value: '0', label: 'Domingo' },
@@ -72,30 +72,33 @@ const TeacherList = () =>{
               { value: '3', label: 'Quarta-feira' },
               { value: '4', label: 'Quinta-feira' },
               { value: '5', label: 'Sexta-feira' },
-              { value: '6', label: 'Sábado' }
+              { value: '6', label: 'Sábado' },
             ]}
           />
-          <Input 
-            type="time" 
-            name="time" 
+          <Input
+            type="time"
+            name="time"
             label="Hora"
             value={time}
-            onChange={ e => {
-              setTime(e.target.value)
+            onChange={e => {
+              setTime(e.target.value);
             }}
           />
 
-          <button type="submit" onSubmit={searchTeachers}> Buscar </button>
+          <button type="submit" onSubmit={searchTeachers}>
+            {' '}
+            Buscar{' '}
+          </button>
         </form>
       </PageHeader>
 
       <main>
-        {teachers.map((teacher: Teacher )=> {
-          return <TeacherItem key={teacher.id} teacher={teacher} />
+        {teachers.map((teacher: Teacher) => {
+          return <TeacherItem key={teacher.id} teacher={teacher} />;
         })}
       </main>
     </div>
   );
-}
+};
 
 export default TeacherList;
