@@ -107,16 +107,16 @@ const TeacherList: React.FC = () => {
           </View>
         )}
       </PageHeader>
-      
-      <View style={styles.textWarningWrapper}>
-        {teachers.length === 0 ? (
-          <Text style={styles.textWarning}>
+
+      {teachers.length === 0 ? (
+          <View style={styles.textWarningWrapper}>
+            <Text style={styles.textWarning}>
             Pressione <Feather name="filter" size={20} color="#9c9c9c"/>{' '}
             para encontrar seu Proffy ideal.
-          </Text>
+            </Text>
+          </View>
         ) : null}
-      </View>
-
+        
       <ScrollView
         style={styles.teacherList}
         contentContainerStyle={{
@@ -135,7 +135,6 @@ const TeacherList: React.FC = () => {
           })
         }
       </ScrollView>
-
     </View>
   );
 }
