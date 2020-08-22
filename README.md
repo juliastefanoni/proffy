@@ -16,7 +16,8 @@
   <a href="#bookmark-functionalities">Functionalities</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#construction-requirements">Requirements</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-technologies-used">Technologies used</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#arrow_forward-running-the-application">Running the application</a>
+  <a href="#arrow_forward-running-the-application">Running the application</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#iphone-screens">Screens</a>
 </p>
 
 ## :bookmark: Functionalities 
@@ -103,4 +104,11 @@ yarn start
  
 The application is now available locally from the route http://localhost:19002/ <br>
 Scan the QR Code with the App Expo (android) or with the camera (iOS)
+
+## :iphone: Screens
+
+### Web
+![Proffy](https://raw.githubusercontent.com/juliastefanoni/proffy/master/github/home.png)
+![Proffy](https://raw.githubusercontent.com/juliastefanoni/proffy/master/github/dar-aulas.png)
+![Proffy](https://raw.githubusercontent.com/juliastefanoni/proffy/master/github/proffys.png)
 
